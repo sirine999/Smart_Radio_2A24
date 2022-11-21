@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1007</width>
-    <height>695</height>
+    <width>1139</width>
+    <height>726</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,8 +19,8 @@
      <rect>
       <x>10</x>
       <y>0</y>
-      <width>991</width>
-      <height>631</height>
+      <width>1121</width>
+      <height>691</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -32,7 +32,7 @@
     <widget class="QGroupBox" name="groupBox_11">
      <property name="geometry">
       <rect>
-       <x>250</x>
+       <x>300</x>
        <y>30</y>
        <width>391</width>
        <height>41</height>
@@ -66,7 +66,7 @@
        <string notr="true">font: 12pt &quot;Berlin Sans FB&quot;;</string>
       </property>
       <property name="text">
-       <string>Gestion des matériels</string>
+       <string>Gestion des matériaux</string>
       </property>
      </widget>
     </widget>
@@ -74,25 +74,25 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>70</y>
-       <width>961</width>
+       <y>100</y>
+       <width>1081</width>
        <height>551</height>
       </rect>
      </property>
      <property name="currentIndex">
       <number>0</number>
      </property>
-     <widget class="QWidget" name="tab_2">
+     <widget class="QWidget" name="ajouter_un_materiel">
       <attribute name="title">
-       <string>Tab 2</string>
+       <string>ajouter_un materiel</string>
       </attribute>
       <widget class="QGroupBox" name="groupBox_2">
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>20</y>
-         <width>931</width>
-         <height>471</height>
+         <y>10</y>
+         <width>1051</width>
+         <height>501</height>
         </rect>
        </property>
        <property name="font">
@@ -175,8 +175,8 @@ font: 10pt &quot;Berlin Sans FB&quot;;
        <widget class="QLabel" name="label_3">
         <property name="geometry">
          <rect>
-          <x>270</x>
-          <y>40</y>
+          <x>10</x>
+          <y>120</y>
           <width>141</width>
           <height>21</height>
          </rect>
@@ -197,8 +197,8 @@ font: 10pt &quot;Berlin Sans FB&quot;;
        <widget class="QLabel" name="label_4">
         <property name="geometry">
          <rect>
-          <x>290</x>
-          <y>80</y>
+          <x>270</x>
+          <y>40</y>
           <width>101</width>
           <height>21</height>
          </rect>
@@ -219,8 +219,8 @@ font: 10pt &quot;Berlin Sans FB&quot;;
        <widget class="QLabel" name="label_6">
         <property name="geometry">
          <rect>
-          <x>580</x>
-          <y>30</y>
+          <x>290</x>
+          <y>80</y>
           <width>111</width>
           <height>31</height>
          </rect>
@@ -241,8 +241,8 @@ font: 10pt &quot;Berlin Sans FB&quot;;
        <widget class="QLineEdit" name="le_marque">
         <property name="geometry">
          <rect>
-          <x>420</x>
-          <y>40</y>
+          <x>160</x>
+          <y>120</y>
           <width>131</width>
           <height>21</height>
          </rect>
@@ -254,8 +254,8 @@ font: 10pt &quot;Berlin Sans FB&quot;;
        <widget class="QDateTimeEdit" name="le_heu_date">
         <property name="geometry">
          <rect>
-          <x>690</x>
-          <y>30</y>
+          <x>400</x>
+          <y>80</y>
           <width>194</width>
           <height>22</height>
          </rect>
@@ -267,8 +267,8 @@ font: 10pt &quot;Berlin Sans FB&quot;;
        <widget class="QPushButton" name="pb_ajouter">
         <property name="geometry">
          <rect>
-          <x>470</x>
-          <y>120</y>
+          <x>610</x>
+          <y>20</y>
           <width>111</width>
           <height>31</height>
          </rect>
@@ -289,8 +289,8 @@ font: 10pt &quot;Berlin Sans FB&quot;;
        <widget class="QLabel" name="label_10">
         <property name="geometry">
          <rect>
-          <x>550</x>
-          <y>80</y>
+          <x>310</x>
+          <y>120</y>
           <width>81</width>
           <height>21</height>
          </rect>
@@ -321,24 +321,11 @@ font: 10pt &quot;Berlin Sans FB&quot;;
          <string notr="true">background-color: rgb(255, 255, 255);</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="le_departement">
-        <property name="geometry">
-         <rect>
-          <x>390</x>
-          <y>80</y>
-          <width>131</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);</string>
-        </property>
-       </widget>
        <widget class="QPushButton" name="pb_modif">
         <property name="geometry">
          <rect>
-          <x>230</x>
-          <y>120</y>
+          <x>610</x>
+          <y>60</y>
           <width>111</width>
           <height>31</height>
          </rect>
@@ -359,8 +346,8 @@ font: 10pt &quot;Berlin Sans FB&quot;;
        <widget class="QPushButton" name="pb_supprimer">
         <property name="geometry">
          <rect>
-          <x>350</x>
-          <y>120</y>
+          <x>610</x>
+          <y>100</y>
           <width>111</width>
           <height>31</height>
          </rect>
@@ -384,8 +371,8 @@ font: 10pt &quot;Berlin Sans FB&quot;;
        <widget class="QLineEdit" name="le_prix">
         <property name="geometry">
          <rect>
-          <x>640</x>
-          <y>80</y>
+          <x>400</x>
+          <y>120</y>
           <width>113</width>
           <height>22</height>
          </rect>
@@ -399,39 +386,31 @@ font: 10pt &quot;Berlin Sans FB&quot;;
          <rect>
           <x>10</x>
           <y>160</y>
-          <width>771</width>
-          <height>301</height>
+          <width>901</width>
+          <height>331</height>
          </rect>
         </property>
         <property name="styleSheet">
          <string notr="true">background-color: rgb(255, 255, 255);</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_5">
-        <property name="geometry">
-         <rect>
-          <x>820</x>
-          <y>150</y>
-          <width>71</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>trier par</string>
-        </property>
-       </widget>
        <widget class="QComboBox" name="comboBox_tri">
         <property name="geometry">
          <rect>
-          <x>810</x>
-          <y>190</y>
-          <width>73</width>
-          <height>22</height>
+          <x>930</x>
+          <y>260</y>
+          <width>101</width>
+          <height>31</height>
          </rect>
         </property>
         <item>
          <property name="text">
           <string>nom</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>id</string>
          </property>
         </item>
         <item>
@@ -443,10 +422,10 @@ font: 10pt &quot;Berlin Sans FB&quot;;
        <widget class="QPushButton" name="pushButton_trie">
         <property name="geometry">
          <rect>
-          <x>800</x>
-          <y>220</y>
-          <width>93</width>
-          <height>28</height>
+          <x>930</x>
+          <y>300</y>
+          <width>101</width>
+          <height>31</height>
          </rect>
         </property>
         <property name="text">
@@ -456,10 +435,10 @@ font: 10pt &quot;Berlin Sans FB&quot;;
        <widget class="QLineEdit" name="le_rech">
         <property name="geometry">
          <rect>
-          <x>800</x>
-          <y>330</y>
-          <width>113</width>
-          <height>22</height>
+          <x>930</x>
+          <y>410</y>
+          <width>111</width>
+          <height>31</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -469,52 +448,21 @@ font: 10pt &quot;Berlin Sans FB&quot;;
        <widget class="QPushButton" name="pushButton_Recherche">
         <property name="geometry">
          <rect>
-          <x>810</x>
-          <y>360</y>
-          <width>93</width>
-          <height>28</height>
+          <x>930</x>
+          <y>450</y>
+          <width>111</width>
+          <height>31</height>
          </rect>
         </property>
         <property name="text">
          <string>chercher</string>
         </property>
        </widget>
-      </widget>
-     </widget>
-     <widget class="QWidget" name="tab">
-      <attribute name="title">
-       <string>Tab 1</string>
-      </attribute>
-      <widget class="QGroupBox" name="groupBox_6">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>10</y>
-         <width>901</width>
-         <height>491</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Berlin Sans FB</family>
-         <pointsize>10</pointsize>
-         <weight>50</weight>
-         <italic>false</italic>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 222, 227);
-font: 10pt &quot;Berlin Sans FB&quot;;</string>
-       </property>
-       <property name="title">
-        <string>affichage</string>
-       </property>
-       <widget class="QPushButton" name="pushButton_12">
+       <widget class="QPushButton" name="pdf">
         <property name="geometry">
          <rect>
-          <x>770</x>
-          <y>160</y>
+          <x>930</x>
+          <y>210</y>
           <width>111</width>
           <height>31</height>
          </rect>
@@ -529,38 +477,130 @@ font: 10pt &quot;Berlin Sans FB&quot;;</string>
          </font>
         </property>
         <property name="text">
-         <string>fichier PDF</string>
+         <string>PDF </string>
         </property>
        </widget>
-       <widget class="QGroupBox" name="groupBox_9">
+       <widget class="QLineEdit" name="le_departement">
         <property name="geometry">
          <rect>
-          <x>770</x>
-          <y>60</y>
-          <width>120</width>
-          <height>80</height>
+          <x>370</x>
+          <y>40</y>
+          <width>113</width>
+          <height>22</height>
          </rect>
         </property>
         <property name="styleSheet">
          <string notr="true">background-color: rgb(255, 255, 255);</string>
         </property>
-        <property name="title">
-         <string>PDF</string>
+       </widget>
+       <widget class="QComboBox" name="comboBox_chercher">
+        <property name="geometry">
+         <rect>
+          <x>930</x>
+          <y>370</y>
+          <width>101</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <item>
+         <property name="text">
+          <string>nom</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>id</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>marque</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>departement</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QProgressBar" name="progressBar">
+        <property name="geometry">
+         <rect>
+          <x>850</x>
+          <y>100</y>
+          <width>118</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="value">
+         <number>24</number>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pb_qr">
+        <property name="geometry">
+         <rect>
+          <x>750</x>
+          <y>100</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>QR</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="inserer_image">
+        <property name="geometry">
+         <rect>
+          <x>750</x>
+          <y>60</y>
+          <width>131</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>insertion image</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pb_pdf1">
+        <property name="geometry">
+         <rect>
+          <x>750</x>
+          <y>20</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>fichier PDF</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="calcul">
+        <property name="geometry">
+         <rect>
+          <x>930</x>
+          <y>160</y>
+          <width>111</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>calculatrice</string>
         </property>
        </widget>
       </widget>
      </widget>
-     <widget class="QWidget" name="tab_3">
+     <widget class="QWidget" name="tab">
       <attribute name="title">
-       <string>Page</string>
+       <string>statistiques</string>
       </attribute>
-      <widget class="QGroupBox" name="groupBox_8">
+      <widget class="QGroupBox" name="groupBox_6">
        <property name="geometry">
         <rect>
-         <x>20</x>
+         <x>0</x>
          <y>10</y>
-         <width>831</width>
-         <height>421</height>
+         <width>1071</width>
+         <height>501</height>
         </rect>
        </property>
        <property name="font">
@@ -577,134 +617,79 @@ font: 10pt &quot;Berlin Sans FB&quot;;</string>
 font: 10pt &quot;Berlin Sans FB&quot;;</string>
        </property>
        <property name="title">
-        <string>Statistiqes</string>
+        <string>statistiques</string>
        </property>
-       <widget class="QGroupBox" name="groupBox_7">
+       <widget class="QFrame" name="horizontalFrame">
         <property name="geometry">
          <rect>
-          <x>480</x>
-          <y>70</y>
-          <width>381</width>
-          <height>191</height>
+          <x>20</x>
+          <y>30</y>
+          <width>1021</width>
+          <height>441</height>
          </rect>
         </property>
-        <property name="font">
-         <font>
-          <family>Berlin Sans FB</family>
-          <pointsize>10</pointsize>
-          <weight>50</weight>
-          <italic>false</italic>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(170, 170, 255);</string>
-        </property>
-        <property name="title">
-         <string>insertion image</string>
-        </property>
-        <widget class="QTextBrowser" name="textBrowser">
-         <property name="geometry">
-          <rect>
-           <x>160</x>
-           <y>30</y>
-           <width>161</width>
-           <height>101</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(255, 255, 255);</string>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="pushButton_6">
-         <property name="geometry">
-          <rect>
-           <x>260</x>
-           <y>150</y>
-           <width>93</width>
-           <height>28</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>Berlin Sans FB</family>
-           <pointsize>10</pointsize>
-           <weight>50</weight>
-           <italic>false</italic>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>Inserer</string>
-         </property>
-        </widget>
-        <widget class="QGroupBox" name="groupBox_10">
-         <property name="geometry">
-          <rect>
-           <x>20</x>
-           <y>40</y>
-           <width>121</width>
-           <height>41</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(255, 222, 227);</string>
-         </property>
-         <property name="title">
-          <string/>
-         </property>
-         <widget class="QLabel" name="label_11">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>10</y>
-            <width>101</width>
-            <height>21</height>
-           </rect>
-          </property>
-          <property name="font">
-           <font>
-            <family>Berlin Sans FB</family>
-            <pointsize>10</pointsize>
-            <weight>50</weight>
-            <italic>false</italic>
-            <bold>false</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>donner image</string>
-          </property>
-         </widget>
-        </widget>
-       </widget>
-       <widget class="QGroupBox" name="groupBox_5">
-        <property name="geometry">
-         <rect>
-          <x>180</x>
-          <y>150</y>
-          <width>241</width>
-          <height>201</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Berlin Sans FB</family>
-          <pointsize>10</pointsize>
-          <weight>50</weight>
-          <italic>false</italic>
-          <bold>false</bold>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 222, 227);
-font: 10pt &quot;Berlin Sans FB&quot;;</string>
-        </property>
-        <property name="title">
-         <string>QR code</string>
-        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout"/>
        </widget>
       </widget>
      </widget>
+     <widget class="QWidget" name="tab_3">
+      <attribute name="title">
+       <string>QrCode</string>
+      </attribute>
+      <widget class="QLabel" name="qrcode">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>20</y>
+         <width>791</width>
+         <height>471</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_4">
+      <attribute name="title">
+       <string>image</string>
+      </attribute>
+      <widget class="QLabel" name="label_image">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>20</y>
+         <width>881</width>
+         <height>471</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="image">
+     <property name="geometry">
+      <rect>
+       <x>930</x>
+       <y>10</y>
+       <width>151</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
     </widget>
    </widget>
   </widget>
@@ -713,7 +698,7 @@ font: 10pt &quot;Berlin Sans FB&quot;;</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1007</width>
+     <width>1139</width>
      <height>26</height>
     </rect>
    </property>

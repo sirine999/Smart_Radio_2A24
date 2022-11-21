@@ -1,4 +1,5 @@
-QT       += core gui sql
+QT       += core gui sql printsupport serialport
+QT  +=charts multimedia multimediawidgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -16,17 +17,24 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    arduino.cpp \
+    calculer.cpp \
     connetion.cpp \
     main.cpp \
     mainwindow.cpp \
-    materiel.cpp
+    materiel.cpp \
+    qrcode.cpp
 
 HEADERS += \
+    arduino.h \
+    calculer.h \
     connetion.h \
     mainwindow.h \
-    materiel.h
+    materiel.h \
+    qrcode.h
 
 FORMS += \
+    calculer.ui \
     mainwindow.ui \
     materiel.ui
 

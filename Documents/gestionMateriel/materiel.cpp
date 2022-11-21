@@ -16,11 +16,16 @@ Materiel::Materiel(int id,QString nom,QString marque,QString departement,QString
 {
     this->id=id; this->nom=nom; this->marque=marque; this->departement=departement; this->heu_date=heu_date; this->prix=prix;
 }
+Materiel::Materiel(int id,QString image)
+{this->id=id;
+this->image=image;}
+
 int Materiel::getid(){return id;}
 QString Materiel::getnom(){return nom;}
 QString Materiel::getmarque(){return marque;}
 QString Materiel::getdepartement(){return departement;}
 QString Materiel::getheu_date(){return heu_date;}
+QString Materiel::getimage(){return image;}
 double Materiel::getprix(){return prix;}
 void Materiel::setid(int id){this->id=id;}
 void Materiel::setnom(QString nom){this->nom=nom;}
@@ -28,7 +33,7 @@ void Materiel::setmarque(QString marque){this->marque=marque;}
 void Materiel::setdepartement(QString departement){this->departement=departement;}
 void Materiel::setheu_date(QString heu_date){this->heu_date=heu_date;}
 void Materiel::setprix(double prix){this->prix=prix;}
-
+void Materiel::setimage(QString image){this->image=image;}
 bool Materiel::ajouter()
 {
  QSqlQuery query;
@@ -122,6 +127,20 @@ bool Materiel::modifier(int id,QString nom,QString marque,QString departement,QS
           }
   return query.exec();
 }
+QSqlQueryModel * Materiel::trie_ID()
+{
+    QSqlQueryModel * model= new QSqlQueryModel();
+
+          model->setQuery("SELECT * FROM materiel ORDER BY id ");
+          model->setHeaderData(0,Qt::Horizontal,QObject::tr("id"));
+          model->setHeaderData(1,Qt::Horizontal,QObject::tr("nom"));
+          model->setHeaderData(2,Qt::Horizontal,QObject::tr("marque"));
+          model->setHeaderData(3,Qt::Horizontal,QObject::tr("departement"));
+          model->setHeaderData(4,Qt::Horizontal,QObject::tr("heu_date"));
+          model->setHeaderData(5,Qt::Horizontal,QObject::tr("prix"));
+
+    return model;
+}
 QSqlQueryModel * Materiel::trie_NOM()
 {
     QSqlQueryModel * model= new QSqlQueryModel();
@@ -150,6 +169,21 @@ QSqlQueryModel * Materiel::trie_PRIX()
 
     return model;
 }
+QSqlQueryModel* Materiel::rechercherid(QString idd )
+    {
+
+    QSqlQueryModel * model= new QSqlQueryModel();
+
+            model->setQuery("select * from materiel where id ='"+idd+"' ");
+            model->setHeaderData(0, Qt::Horizontal, QObject::tr("id"));
+            model->setHeaderData(1, Qt::Horizontal, QObject::tr("nom"));
+            model->setHeaderData(2, Qt::Horizontal, QObject::tr("marque"));
+            model->setHeaderData(3, Qt::Horizontal, QObject::tr("departement"));
+            model->setHeaderData(4, Qt::Horizontal, QObject::tr("heu_date"));
+            model->setHeaderData(5, Qt::Horizontal, QObject::tr("prix"));
+
+            return model;
+    }
 QSqlQueryModel* Materiel::recherchernom(QString nom)
     {
 
@@ -165,3 +199,64 @@ QSqlQueryModel* Materiel::recherchernom(QString nom)
 
             return model;
     }
+QSqlQueryModel* Materiel::recherchermarque(QString marque)
+    {
+
+    QSqlQueryModel * model= new QSqlQueryModel();
+
+            model->setQuery("select * from materiel where marque ='"+marque+"' ");
+            model->setHeaderData(0, Qt::Horizontal, QObject::tr("id"));
+            model->setHeaderData(1, Qt::Horizontal, QObject::tr("nom"));
+            model->setHeaderData(2, Qt::Horizontal, QObject::tr("marque"));
+            model->setHeaderData(3, Qt::Horizontal, QObject::tr("departement"));
+            model->setHeaderData(4, Qt::Horizontal, QObject::tr("heu_date"));
+            model->setHeaderData(5, Qt::Horizontal, QObject::tr("prix"));
+
+            return model;
+    }
+
+QSqlQueryModel* Materiel::rechercherdepartement(QString departement)
+    {
+
+    QSqlQueryModel * model= new QSqlQueryModel();
+
+            model->setQuery("select * from materiel where departement ='"+departement+"' ");
+            model->setHeaderData(0, Qt::Horizontal, QObject::tr("id"));
+            model->setHeaderData(1, Qt::Horizontal, QObject::tr("nom"));
+            model->setHeaderData(2, Qt::Horizontal, QObject::tr("marque"));
+            model->setHeaderData(3, Qt::Horizontal, QObject::tr("departement"));
+            model->setHeaderData(4, Qt::Horizontal, QObject::tr("heu_date"));
+            model->setHeaderData(5, Qt::Horizontal, QObject::tr("prix"));
+
+            return model;
+    }
+
+int Materiel::statistique(QString departement)
+{
+    QSqlQuery query;
+    query.prepare("select count(*) from materiel where departement=:departement ");
+    query.bindValue(":departement",departement);
+    query.exec();
+
+    int count =-1;
+
+            while(query.next())
+                    {
+                        count = query.value(0).toInt() ;
+                        return count;
+
+                    }
+
+    return count;
+
+}
+bool Materiel::ajouterimage(int id,QString image){
+    QSqlQuery query;
+    QString ID = QString::number(id);
+
+    query.prepare("UPDATE materiel SET image=:image WHERE id=:id");
+    query.bindValue(":id", ID);
+    query.bindValue(":image", image);
+
+    return query.exec();
+}
