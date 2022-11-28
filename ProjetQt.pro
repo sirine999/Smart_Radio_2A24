@@ -1,4 +1,5 @@
-QT       += core gui sql
+QT       += core gui sql printsupport multimediawidgets network
+QT += serialport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -16,18 +17,34 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    DuMesengerConnectionDialog.cpp \
+    admin.cpp \
+    arduino.cpp \
     connection.cpp \
     employee.cpp \
+    login.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    statistiques.cpp \
+    widget.cpp
 
 HEADERS += \
+    DuMesengerConnectionDialog.h \
+    admin.h \
+    arduino.h \
     connection.h \
     employee.h \
-    mainwindow.h
+    login.h \
+    mainwindow.h \
+    statistiques.h \
+    widget.h
 
 FORMS += \
-    mainwindow.ui
+    DuMesengerConnectionDialog.ui \
+    login.ui \
+    mainwindow.ui \
+    statistiques.ui \
+    widget.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

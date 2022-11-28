@@ -2,6 +2,7 @@
 #include "connection.h"
 #include <QMessageBox>
 #include <QApplication>
+#include "login.h"
 
 int main(int argc, char *argv[])
 {
@@ -9,13 +10,14 @@ int main(int argc, char *argv[])
     Connection c;
     bool test=c.createconnection();
     MainWindow w;
+    Login L;
     if(test)
     {
 
         QMessageBox::information(nullptr, QObject::tr("database is open"),
                                  QObject::tr("Connection successfully !"),
                                  QMessageBox::Cancel);
-        w.show();
+        L.show();
     }else
         QMessageBox::critical(nullptr, QObject::tr("database is not open"),
                                  QObject::tr("Connection failed !"),

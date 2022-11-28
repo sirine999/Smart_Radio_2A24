@@ -37,6 +37,13 @@ public:
     bool modifier();
     QSqlQueryModel * getAllId();
     Employee* reademploye (QString val);
+    QSqlQueryModel * afficher_choix(QString choix);
+    QSqlQueryModel *afficher_id(QString ch);
+    QSqlQueryModel *afficher_nom(QString ch);
+    QSqlQueryModel *afficher_salaire(QString ch);
+
+    int statistique1();
+    int statistique2();
 
 private:
     int id;

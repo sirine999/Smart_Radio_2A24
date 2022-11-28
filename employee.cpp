@@ -64,6 +64,7 @@ QSqlQueryModel * Employee:: getAllId(){
             model->setQuery("select id from Employee ");
             return model ;
 }
+
 Employee* Employee::reademploye (QString val)
 {
  QSqlQuery query;
@@ -71,11 +72,11 @@ Employee* Employee::reademploye (QString val)
         if(query.exec())
         {     while(query.next())
             {
-               setId(query.value(0).toInt());
-              setNom(query.value(1).toString());
+             setId(query.value(0).toInt());
+             setNom(query.value(1).toString());
              setPrenom(query.value(2).toString());
              setAdresse(query.value(3).toString());
-              setMail(query.value(4).toString());
+             setMail(query.value(4).toString());
              setSalaire(query.value(5).toInt());
              setGenre(query.value(6).toString());
 
@@ -83,5 +84,95 @@ Employee* Employee::reademploye (QString val)
         }
      return this;
 }
+
+QSqlQueryModel *Employee:: afficher_choix(QString choix)
+{
+    QSqlQueryModel * model =new QSqlQueryModel();
+
+     if(choix=="nom croissants")
+    {
+        model->setQuery("SELECT * FROM employee  ORDER BY nom ASC ;");
+    }
+     else if(choix=="nom decroissants")
+     {
+         model->setQuery("SELECT * FROM employee  ORDER BY nom DESC;");
+     }else if(choix=="prenom croissants")
+     {
+         model->setQuery("SELECT * FROM employee  ORDER BY prenom ASC;");
+     }else if(choix=="prenom decroissant")
+     {
+         model->setQuery("SELECT * FROM employee  ORDER BY prenom DESC;");
+     }else if(choix=="salaire croissant")
+     {
+         model->setQuery("SELECT * FROM employee  ORDER BY salaire ASC;");
+     }
+     else if(choix=="salaire decroissant")
+     {
+         model->setQuery("SELECT * FROM employee ORDER BY salaire DESC;");
+     }
+    else if (choix=="choisir")
+    {
+        model->setQuery("SELECT * FROM employee ");
+    }
+
+
+    return model;
+
+
+
+}
+
+
+
+QSqlQueryModel *Employee::afficher_id(QString ch)
+{
+    QSqlQueryModel * model =new QSqlQueryModel();
+    model->setQuery("SELECT * FROM employee where id= '"+ch+"' ");
+          return model ;
+}
+QSqlQueryModel *Employee::afficher_nom(QString ch)
+{
+    QSqlQueryModel * model =new QSqlQueryModel();
+    model->setQuery("SELECT * FROM employee where nom= '"+ch+"' ");
+          return model ;
+}
+QSqlQueryModel *Employee:: afficher_salaire(QString ch)
+{
+    QSqlQueryModel * model =new QSqlQueryModel();
+    model->setQuery("SELECT * FROM employee where salaire= '"+ch+"' ");
+
+    return model ;
+
+}
+
+
+
+//Statistiques
+int Employee::statistique1(){
+    QSqlQuery query;
+            int count=0 ;
+            QSqlQuery requete("select * from employee where genre like 'homme' ") ;
+            while(requete.next())
+            {
+                    count++ ;
+            }
+
+        return count ;
+}
+
+int Employee::statistique2(){
+    QSqlQuery query;
+            int count=0 ;
+            QSqlQuery requete("select * from employee where genre like 'femme' ") ;
+            while(requete.next())
+            {
+                    count++ ;
+            }
+
+        return count ;
+}
+
+
+
 
 
