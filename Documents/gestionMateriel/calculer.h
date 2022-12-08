@@ -23,7 +23,7 @@ private slots :
     void MathButtonPressed();
     void EqualButtonPressed();
     void ChangeNumberSign();
-    void on_Calculer_iconSizeChanged(const QSize &iconSize);
+    //void on_Calculer_iconSizeChanged(const QSize &iconSize);
 };
 
 #endif // CALCULER_H

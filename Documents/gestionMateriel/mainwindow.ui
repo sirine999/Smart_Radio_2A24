@@ -588,6 +588,28 @@ font: 10pt &quot;Berlin Sans FB&quot;;
          <string>calculatrice</string>
         </property>
        </widget>
+       <widget class="QLabel" name="label_5">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>101</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Berlin Sans FB</family>
+          <pointsize>10</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Id du matériel</string>
+        </property>
+       </widget>
       </widget>
      </widget>
      <widget class="QWidget" name="tab">
@@ -660,10 +682,10 @@ font: 10pt &quot;Berlin Sans FB&quot;;</string>
       <widget class="QLabel" name="label_image">
        <property name="geometry">
         <rect>
-         <x>100</x>
-         <y>20</y>
-         <width>881</width>
-         <height>471</height>
+         <x>20</x>
+         <y>10</y>
+         <width>701</width>
+         <height>501</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -671,6 +693,19 @@ font: 10pt &quot;Berlin Sans FB&quot;;</string>
        </property>
        <property name="text">
         <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="on">
+       <property name="geometry">
+        <rect>
+         <x>820</x>
+         <y>150</y>
+         <width>201</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>arduino</string>
        </property>
       </widget>
      </widget>

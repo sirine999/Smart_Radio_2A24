@@ -1,10 +1,11 @@
 QT       += core gui sql printsupport serialport
-QT  +=charts multimedia multimediawidgets
+QT  +=charts multimedia multimediawidgets sensors
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-CONFIG += c++11
-
+CONFIG += c++11 console
+CONFIG += mobility
+MOBILITY += sensors
 # The following define makes your compiler emit warnings if you use
 # any Qt feature that has been marked deprecated (the exact warnings
 # depend on your compiler). Please consult the documentation of the
@@ -23,7 +24,8 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     materiel.cpp \
-    qrcode.cpp
+    qrcode.cpp \
+    scenario.cpp
 
 HEADERS += \
     arduino.h \
@@ -31,12 +33,13 @@ HEADERS += \
     connetion.h \
     mainwindow.h \
     materiel.h \
-    qrcode.h
+    qrcode.h \
+    scenario.h
 
 FORMS += \
     calculer.ui \
     mainwindow.ui \
-    materiel.ui
+    scenario.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

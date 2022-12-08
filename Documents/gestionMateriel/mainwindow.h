@@ -15,6 +15,8 @@
 #include<QtCharts>
 #include<QChartView>
 #include"calculer.h"
+#include"arduino.h"
+#include"scenario.h"
 namespace Ui {
 class MainWindow;
 }
@@ -28,6 +30,7 @@ public:
     ~MainWindow();
 
 private slots:
+
     void stat();
     void on_pb_ajouter_clicked();
 
@@ -60,10 +63,15 @@ private slots:
 
     void on_calcul_clicked();
 
+
+    void on_on_clicked();
+
 private:
     Ui::MainWindow *ui;
     Materiel m;
     Calculer *calc;
+    scenario *s;
+
 
 };
 

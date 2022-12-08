@@ -26,53 +26,8 @@ MainWindow::MainWindow(QWidget *parent) :
   ui->tab_materiel->setModel(m.afficher());
   /* statistiques*/
 
-
-        int id=0;
-        QString nom="";
-        QString marque="";
-        QString departement="";
-        QString heu_date="";
-        double prix=0;
-
-        Materiel m(id,nom,marque,departement,heu_date,prix);
-
-
-
-            QPieSeries *series = new QPieSeries();
-            series->setHoleSize(0.35);
-
-
-            int nbr=m.statistique("maintenance");
-            int nbrr=m.statistique("IT");
-            int nbrrr=m.statistique("acceuil");
-            int nb=m.statistique("administration");
-            int total=nbr+nbrr+nbrrr+nb;
-
-            QString a=QString("maintenance "+QString::number((nbr*100)/total,'f',2)+"%" );
-            QString b=QString("IT "+QString::number((nbrr*100)/total,'f',2)+"%" );
-            QString c=QString("acceuil "+QString::number((nbrrr*100)/total,'f',2)+"%" );
-            QString d=QString("administration "+QString::number((nb*100)/total,'f',2)+"%" );
-            QPieSlice *slice = series->append(d,nb);
-            slice->setExploded();
-            slice->setLabelVisible();
-            series->append(a,nbr);
-            series->append(b, nbrr);
-            series->append(c, nbrrr);
-
-            QChart *chart = new QChart();
-            chart->addSeries(series);
-            chart->setAnimationOptions(QChart::SeriesAnimations);
-            chart->setTitle("statistiques par departement");
-            chart->setTheme(QChart::ChartThemeBlueIcy);
-
-
-            QChartView *chartview = new QChartView(chart);
-            chartview->setRenderHint(QPainter::Antialiasing);
-
-            chartview->setParent(ui->horizontalFrame);
-
-
-
+stat();
+//******************ARDUINO*****************************************************************
 
 
 }
@@ -81,6 +36,7 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
 void MainWindow::stat()
 {
     /* statistiques*/
@@ -508,4 +464,10 @@ void MainWindow::on_calcul_clicked()
     calc=new Calculer(this);
     calc->show();
 
+}
+
+void MainWindow::on_on_clicked()
+{
+   s=new scenario(this);
+   s->show();
 }
